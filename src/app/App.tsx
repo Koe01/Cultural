@@ -1,6 +1,11 @@
 import { RouterProvider } from 'react-router';
 import { router } from './routes';
+import { FavoritesProvider } from './context/FavoritesContext';
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <FavoritesProvider>
+      <RouterProvider router={router} />
+    </FavoritesProvider>
+  );
 }

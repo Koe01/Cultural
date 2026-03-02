@@ -1,7 +1,8 @@
 import { Link } from 'react-router';
 import Navigation from '../components/Navigation';
+import DailyContentSection from '../components/DailyContentSection';
 import { stories } from '../data/stories';
-import { MapPin } from 'lucide-react';
+import { MapPin, Search } from 'lucide-react';
 
 export default function Home() {
   const [heroStory, ...otherStories] = stories;
@@ -10,15 +11,22 @@ export default function Home() {
     <div className="min-h-screen bg-[var(--cream)] pb-20" style={{ fontFamily: 'var(--font-sans)' }}>
       {/* Header */}
       <header className="pt-8 pb-6 px-6">
-        <h1
-          className="text-[32px] leading-[1.2] mb-2"
-          style={{ fontFamily: 'var(--font-serif)', color: 'var(--ink)' }}
-        >
-          Archive of<br />Collective Memory
-        </h1>
-        <p className="text-[15px] text-[var(--ink-soft)] mt-1">
-          Stories, myths & wisdom passed through generations
-        </p>
+        <div className="flex items-start justify-between">
+          <div>
+            <h1
+              className="text-[32px] leading-[1.2] mb-2"
+              style={{ fontFamily: 'var(--font-serif)', color: 'var(--ink)' }}
+            >
+              Archive of<br />Collective Memory
+            </h1>
+            <p className="text-[15px] text-[var(--ink-soft)] mt-1">
+              Stories, myths & wisdom passed through generations
+            </p>
+          </div>
+          <Link to="/search" className="p-2 mt-1 text-[var(--ink-soft)] active:scale-95 transition-transform touch-manipulation">
+            <Search size={22} strokeWidth={1.5} />
+          </Link>
+        </div>
       </header>
 
       {/* Hero Story */}
@@ -57,6 +65,9 @@ export default function Home() {
           </div>
         </article>
       </Link>
+
+      {/* Daily Content */}
+      <DailyContentSection />
 
       {/* Other Stories */}
       <div className="px-6 space-y-6">

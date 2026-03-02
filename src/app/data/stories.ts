@@ -7,6 +7,7 @@ export interface Story {
   content: string;
   quote?: string;
   origin: string;
+  language: string;
   relatedStories?: string[];
 }
 
@@ -23,6 +24,7 @@ export interface Region {
   name: string;
   description: string;
   storyCount: number;
+  contentCounts?: Record<string, number>;
 }
 
 export const stories: Story[] = [
@@ -32,6 +34,7 @@ export const stories: Story[] = [
     region: 'Oaxaca, Mexico',
     category: 'legend',
     origin: 'Zapotec tradition, circa 15th century',
+    language: 'en',
     excerpt: 'A story of patience, craft, and celestial longing passed down through generations of artisans.',
     quote: 'The moon watched her weave for thirty nights, until the cloth itself began to glow.',
     content: `In a valley where the mountains meet the clouds, there lived a weaver named Xunxi who created textiles so intricate that travelers came from distant lands to witness her work.
@@ -51,6 +54,7 @@ From that night forward, Xunxi's textiles carried a luminescence that no other w
     region: 'Kerala, India',
     category: 'folktale',
     origin: 'Malabari oral tradition',
+    language: 'en',
     excerpt: 'When words cannot cross the river, breath builds a bridge.',
     quote: 'Three sighs for sorrow, three for hope, and three for the path between.',
     content: `In a time before written records, two villages stood on opposite banks of a river that could not be crossed during monsoon season. For six months of the year, families were separated, lovers kept apart, and news traveled only through the wind.
@@ -68,6 +72,7 @@ Legend says that on the final night of monsoon season, if you listen carefully, 
     region: 'Timbuktu, Mali',
     category: 'oral-history',
     origin: 'Songhay historical account, 16th century',
+    language: 'en',
     excerpt: 'Not all libraries are built of stone; some are kept in the hearts of those who refuse to forget.',
     content: `When invaders came to burn the great libraries of Timbuktu, the scholars made a pact. Each would memorize entire manuscripts—not just the words, but the spaces between them, the marginalia, even the stains left by previous readers' fingers.
 
@@ -84,6 +89,7 @@ Centuries later, when it became safe again, they began to write everything down.
     region: 'Iceland',
     category: 'myth',
     origin: 'Norse-Icelandic folklore',
+    language: 'en',
     excerpt: 'In the far north, there are those who collect vanishing sounds before they disappear forever.',
     quote: 'She kept the last echo of her grandmother\'s laughter in a small glass bottle by the window.',
     content: `In the coldest part of Iceland, where glaciers remember things that humans forget, there lived a woman who collected sounds. Not recordings—actual sounds, captured and preserved like rare butterflies.
@@ -100,6 +106,7 @@ She became a keeper of acoustic memory, preserving not just sounds but the conte
     region: 'Kyoto, Japan',
     category: 'legend',
     origin: 'Muromachi period tradition',
+    language: 'en',
     excerpt: 'Sometimes, the greatest gift is not to remember, but to be released from memory.',
     content: `In a hidden tea house in Kyoto, there is a ceremony that only happens once in a person's lifetime. It is called the Tea of Forgetting, and it is offered to those who carry memories too heavy to bear.
 

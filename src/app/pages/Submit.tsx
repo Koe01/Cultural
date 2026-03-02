@@ -110,13 +110,17 @@ export default function Submit() {
               className="w-full px-4 py-4 bg-white border border-[var(--border)] rounded-sm text-[16px] text-[var(--ink)] focus:outline-none focus:ring-2 focus:ring-[var(--olive)] touch-manipulation"
               required
             >
-              <option value="">Select a type</option>
-              <option value="legend">Legend</option>
-              <option value="folktale">Folk Tale</option>
-              <option value="myth">Myth</option>
-              <option value="proverb">Proverb or Idiom</option>
-              <option value="oral-history">Oral History</option>
-              <option value="saying">Local Saying</option>
+              <option value="">Bir tür seçin</option>
+              <option value="legend">Efsane</option>
+              <option value="folktale">Halk Masalı</option>
+              <option value="myth">Mit</option>
+              <option value="proverb">Atasözü</option>
+              <option value="idiom">Deyim</option>
+              <option value="oral-history">Sözlü Tarih</option>
+              <option value="folk-poem">Mani</option>
+              <option value="folk-song">Türkü</option>
+              <option value="lullaby">Ninni</option>
+              <option value="folk-belief">Halk İnanışı</option>
             </select>
           </div>
 
@@ -180,7 +184,7 @@ export default function Submit() {
         </form>
       </div>
 
-      <Navigation current="submit" />
+      <Navigation current="more" />
     </div>
   );
 }

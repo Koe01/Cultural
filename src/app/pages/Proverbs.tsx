@@ -138,7 +138,7 @@ export default function Proverbs() {
         </div>
       </div>
 
-      <Navigation current="proverbs" />
+      <Navigation current="more" />
     </div>
   );
 }

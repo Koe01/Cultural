@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router';
-import { ArrowLeft, Bookmark, Share2, MapPin } from 'lucide-react';
+import { ArrowLeft, Share2, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
+import FavoriteButton from '../components/FavoriteButton';
 import { stories } from '../data/stories';
 
 export default function StoryDetail() {
@@ -28,9 +29,7 @@ export default function StoryDetail() {
             <ArrowLeft size={22} strokeWidth={1.5} />
           </Link>
           <div className="flex items-center gap-2">
-            <button className="text-[var(--ink-soft)] p-2 active:scale-95 touch-manipulation">
-              <Bookmark size={20} strokeWidth={1.5} />
-            </button>
+            <FavoriteButton id={story.id} type="story" />
             <button className="text-[var(--ink-soft)] p-2 active:scale-95 touch-manipulation">
               <Share2 size={20} strokeWidth={1.5} />
             </button>
